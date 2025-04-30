@@ -150,7 +150,7 @@ services:
   ocean-node:
     image: oceanprotocol/ocean-node:0.2.1
     pull_policy: always
-    container_name: ocean-node-11
+    container_name: ocean-node
     restart: on-failure
     ports:
       - "$HTTP_API_PORT:$HTTP_API_PORT"
@@ -199,6 +199,12 @@ services:
       P2P_ipV6BindWsPort: '$P2P_ipV6BindWsPort'
       P2P_ANNOUNCE_ADDRESSES: '$P2P_ANNOUNCE_ADDRESSES'
       P2P_MAX_CONNECTIONS: '150'
+networks:
+  default:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.16.0.0/24
 EOF
 
 echo -e "\e[1;32mDocker Compose file has been generated successfully.\e[0m"
