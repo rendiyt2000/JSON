@@ -191,7 +191,7 @@ services:
       HTTP_API_PORT: '$HTTP_API_PORT'
       P2P_ENABLE_IPV4: 'true'
       P2P_ENABLE_IPV6: 'false'
-      P2P_ipV4BindAddress: '0.0.0.0'
+      P2P_ipV4BindAddress: '0.0.0.0'https://github.com/rendiyt2000/JSON/blob/main/23.sh
       P2P_ipV4BindTcpPort: '$P2P_ipV4BindTcpPort'
       P2P_ipV4BindWsPort: '$P2P_ipV4BindWsPort'
       P2P_ipV6BindAddress: '::'
@@ -199,6 +199,7 @@ services:
       P2P_ipV6BindWsPort: '$P2P_ipV6BindWsPort'
       P2P_ANNOUNCE_ADDRESSES: '$P2P_ANNOUNCE_ADDRESSES'
       P2P_MAX_CONNECTIONS: '100'
+      DOCKER_COMPUTE_ENVIRONMENTS: '[{"socketPath":"/var/run/docker.sock","resources":[{"id":"disk","total":1000000000}],"storageExpiry":604800,"maxJobDuration":36000,"fees":{"1":[{"feeToken":"0x123","prices":[{"id":"cpu","price":1}]}]},"free":{"maxJobDuration":360000,"maxJobs":1,"resources":[{"id":"cpu","max":1},{"id":"ram","max":1000000000},{"id":"disk","max":1000000000}]}}]'      DOCKER_COMPUTE_ENVIRONMENTS: '[{"socketPath":"/var/run/docker.sock","resources":[{"id":"disk","total":1000000000}],"storageExpiry":604800,"maxJobDuration":36000,"fees":{"1":[{"feeToken":"0x123","prices":[{"id":"cpu","price":1}]}]},"free":{"maxJobDuration":360000,"maxJobs":1,"resources":[{"id":"cpu","max":1},{"id":"ram","max":1000000000},{"id":"disk","max":1000000000}]}}]'
 networks:
   default:
     driver: bridge
